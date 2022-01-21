@@ -8,7 +8,7 @@ from sklearn.metrics import confusion_matrix
 from tensorflow import keras 
 from keras import layers
 
-def test_model(model, test_x, test_y):
+def test_model(model, test_x, test_y, only_accuracy=False):
     y_hat = model.predict(test_x)
     for i in range(y_hat.shape[0]):
         if y_hat[i][0] < 0.5:
@@ -25,24 +25,22 @@ def test_model(model, test_x, test_y):
     TP = np.diag(cm)
     TN = cm.sum() - (FP + FN + TP)
 
+    accuracy = np.count_nonzero((y_hat == np.array(test_y)))/len(test_y)
 
+    if not only_accuracy:
+        print('Buys: {:d}, Holds: {:d}'.format(buys, holds))
+        print("True Buys: {:d}, False Buys: {:d}, True Holds: {:d}, False Holds: {:d}".format(TP[0],FP[0],TN[0],FN[0]))
+    print("Accuracy: {:.4f}".format(accuracy))
 
-    print('Buys: {:d}, Holds: {:d}'.format(buys, holds))
-    print("True Buys: {:d}, False Buys: {:d}, True Holds: {:d}, False Holds: {:d}".format(TP[0],FP[0],TN[0],FN[0]))
-    print("Accuracy: {:.4f}".format(np.count_nonzero((y_hat == np.array(test_y)))/len(test_y)))
+    return accuracy
 
-def testmodel(input_shape, activation='relu', optimizer=None, loss=None):
+def testmodel(input_shape, activation='relu'):
 
     model = keras.Sequential()
     model.add(layers.Input(shape=input_shape))
     model.add(layers.Dense(units=256, activation=activation))
     model.add(layers.Flatten())
     model.add(layers.Dense(units=1, activation='sigmoid'))
-
-    opt = 'sgd' if optimizer == None else optimizer
-    loss = 'binary_crossentropy' if loss == None else loss
-
-    model.compile(optimizer=opt, loss=loss, metrics=['accuracy'])
 
     return model
 
@@ -60,14 +58,9 @@ def model0(input_shape, activation='relu', optimizer=None, loss=None):
     model.add(layers.Dense(units=16, activation=activation, name='dense_6'))
     model.add(layers.Dense(units=1, activation='sigmoid', name='output'))
 
-    opt = 'sgd' if optimizer == None else optimizer
-    loss = 'binary_crossentropy' if loss == None else loss
-
-    model.compile(optimizer=opt, loss=loss, metrics=['accuracy'])
-
     return model
 
-def model1(input_shape, activation='relu', optimizer=None, loss=None):
+def model1(input_shape, activation='relu'):
 
     model = keras.Sequential()
     model.add(layers.Input(shape=input_shape, name='input_layer'))
@@ -86,14 +79,9 @@ def model1(input_shape, activation='relu', optimizer=None, loss=None):
     model.add(layers.Dense(units=32, activation=activation, name='dense_2'))
     model.add(layers.Dense(units=1, activation='sigmoid', name='output'))
 
-    opt = 'sgd' if optimizer == None else optimizer
-    loss = 'binary_crossentropy' if loss == None else loss
-
-    model.compile(optimizer=opt, loss=loss, metrics=['accuracy'])
-
     return model
 
-def model2(input_shape, activation='relu', optimizer=None, loss=None):
+def model2(input_shape, activation='relu'):
 
     model = keras.Sequential()
     model.add(layers.Input(input_shape, name='input_layer'))
@@ -113,38 +101,41 @@ def model2(input_shape, activation='relu', optimizer=None, loss=None):
     model.add(layers.Dense(units=32, activation=activation, name='dense_1'))
     model.add(layers.Dense(32, activation=activation, name='dense_2'))
     model.add(layers.Dense(1, activation='sigmoid', name='output'))
-
-    opt = 'sgd' if optimizer == None else optimizer
-    loss = 'binary_crossentropy' if loss == None else loss
-
-    model.compile(optimizer=opt, loss=loss, metrics=['accuracy'])
     
     return model
 
 def train_model(net, train_data, val_data=None, batch_size=32, 
-                epochs=100, activation=None, optimizer=None, loss=None,
-                verbose=1):
+                epochs=100, activation=None, loss=None,
+                verbose=1, learning_rate=0.001, return_history=False):
 
     train_x, train_y = train_data
     input_shape = train_x.shape[1:]
 
 
     if net == 0:
-        model = model0(input_shape, activation, optimizer, loss)
+        model = model0(input_shape, activation)
     elif net == 1:
-        model = model1(input_shape, activation, optimizer, loss)
+        model = model1(input_shape, activation)
     elif net == 2:
-        model = model2(input_shape, activation, optimizer, loss)
+        model = model2(input_shape, activation)
     elif net == -1:
-        model = testmodel(input_shape, activation, optimizer, loss)
+        model = testmodel(input_shape, activation)
     
 
-    model.fit(train_x, 
+    opt = tf.keras.optimizers.Adam(learning_rate=learning_rate)
+    loss = 'binary_crossentropy' if loss == None else loss
+
+    model.compile(optimizer=opt, loss=loss, metrics=['accuracy'])
+    
+    history = model.fit(train_x, 
             train_y, 
             verbose=verbose, 
             batch_size=batch_size, 
             epochs=epochs,
             validation_data=val_data,
     )
+
+    if (return_history):
+        return model, history
 
     return model
