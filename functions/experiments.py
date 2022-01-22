@@ -13,9 +13,13 @@ from sklearn.metrics import confusion_matrix
 def experiment(data, num_iteration):
 
     train_x, train_y, test_x, test_y = data
-    learning_rates = [0.1, 0.001, 0.0001, 0.01, 0.5, 0.05, 0.005, 0.0005] 
+    learning_rates = [0.01, 0.001] 
     batch_sizes = [64, 128, 256, 512, 1024]
     epochs = [20, 30, 40, 50] 
+
+    train_hist = list()
+    test_hist = list()
+    svm_hist = list()
 
     for i in range(num_iteration):
     
@@ -40,7 +44,7 @@ def experiment(data, num_iteration):
                                             loss='binary_crossentropy',
                                             verbose=0, return_history=True)
             models.append(net)
-            train_accuracies.append(history.history['accuracy'][0])
+            train_accuracies.append(history.history['accuracy'][-1])
 
         accuracies = list()
         for i in range(num_nets):
@@ -83,8 +87,15 @@ def experiment(data, num_iteration):
 
         print(f"\n----------- SVM -----------")
 
-        print("Accuracy: {:.4f}\n".format(np.count_nonzero(((y_hat == test_y[:,0])))/len(test_y)))
+        accuracySVM = np.count_nonzero(((y_hat == test_y[:,0])))/len(test_y)
+        print("Accuracy: {:.4f}\n".format(accuracySVM))
 
+        train_hist.append(train_accuracies)
+        test_hist.append(accuracies)
+        svm_hist.append(accuracySVM)
+
+    
+    return train_hist, test_hist, svm_hist
 
 if __name__ == "__main__":
     
@@ -103,8 +114,42 @@ if __name__ == "__main__":
     train_x, val_x, test_x, train_y, val_y, test_y = preprocess_data(data, k=shift_days, column=value_to_predict, window=window)
 
     
-    num_iterations = 3
+    num_iterations = 10
     data = (train_x, train_y, test_x, test_y)
 
     print("Iteration starting...")
-    experiment(data, num_iterations)
+    train_hist, test_hist, svm_hist = experiment(data, num_iterations)
+
+    print(f"\n--------------------------------------------------\n")
+    print(f"\n---------------------- DONE ----------------------\n")
+    print(f"\n--------------------------------------------------\n")
+
+    train_hist = np.array(train_hist)
+    test_hist = np.array(test_hist)
+    svm_hist = np.array(svm_hist)
+
+
+    print(f"\n\n---------------------- RECAP ----------------------\n")
+
+    print(f"\n----------- Train -----------")
+
+    print("FullyConnected Network:")
+    print(f"     Max: {train_hist[:,0].max():.4f}, Min: {train_hist[:,0].min():.4f}, Avg: {train_hist[:,0].mean():.4f}, Std: {train_hist[:,0].std():.4f} ")
+    print("LSTM Network:")
+    print(f"     Max: {train_hist[:,1].max():.4f}, Min: {train_hist[:,1].min():.4f}, Avg: {train_hist[:,1].mean():.4f}, Std: {train_hist[:,1].std():.4f} ")    
+    print("CNN Network:")
+    print(f"     Max: {train_hist[:,2].max():.4f}, Min: {train_hist[:,2].min():.4f}, Avg: {train_hist[:,2].mean():.4f}, Std: {train_hist[:,2].std():.4f} ")
+
+    print(f"\n----------- Test -----------")
+
+    print("FullyConnected Network:")
+    print(f"     Max: {test_hist[:,0].max():.4f}, Min: {test_hist[:,0].min():.4f}, Avg: {test_hist[:,0].mean():.4f}, Std: {test_hist[:,0].std():.4f} ")
+    print("LSTM Network:")
+    print(f"     Max: {test_hist[:,1].max():.4f}, Min: {test_hist[:,1].min():.4f}, Avg: {test_hist[:,1].mean():.4f}, Std: {test_hist[:,1].std():.4f} ")    
+    print("CNN Network:")
+    print(f"     Max: {test_hist[:,2].max():.4f}, Min: {test_hist[:,2].min():.4f}, Avg: {test_hist[:,2].mean():.4f}, Std: {test_hist[:,2].std():.4f} ")
+
+    print(f"\n----------- SVM -----------")
+
+    print(f"     Max: {svm_hist.max():.4f}, Min: {svm_hist.min():.4f}, Avg: {svm_hist.mean():.4f}, Std: {svm_hist.std():.4f} ")
+    

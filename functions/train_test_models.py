@@ -30,7 +30,7 @@ def test_model(model, test_x, test_y, only_accuracy=False):
     if not only_accuracy:
         print('Buys: {:d}, Holds: {:d}'.format(buys, holds))
         print("True Buys: {:d}, False Buys: {:d}, True Holds: {:d}, False Holds: {:d}".format(TP[0],FP[0],TN[0],FN[0]))
-    print("Accuracy: {:.4f}".format(accuracy))
+        print("Accuracy: {:.4f}".format(accuracy))
 
     return accuracy
 
