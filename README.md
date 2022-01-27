@@ -1,12 +1,25 @@
-# NAMLProject - Price Prediction
+# Stock Price Prediction using Support Vector Machine
 
-In [data](data) can be found some CSV files of BTC/EUR trade values taken from Binance API with different timeframes.  
-The format is Timestamp - OHLC+V ([Open-High-Low-Close + Volume](https://en.wikipedia.org/wiki/Open-high-low-close_chart)).
+This is the implementation and documentation of the assigned project for _Numerical Analysis for Machine Learning_. As the title suggest, it's based on predicting stock prices exploiting the machine learning model [SVM](data/Cortes-Vapnik1995_Article_Support-vectorNetworks.pdf).
+The entire process and theory behind our choices are widely explained in the [report](NAML_Project-Manzardo.pdf).
 
-### Timestamp to Datetime conversion
+## Folder Structure
+> * [data](data) contains the dataset and results of hypertuning window and shift parameters.
+> * [functions](functions) contains Python modules used in the implementation.
+> * [models](models) contains sample trained models and images of their structure.
+> * [notebook](notebook) contains a Jupiter Notebook example of what has been developed, also the required libraries.
+> * [outputs](outputs) has some example output of the experiments.
+> * [papers](papers) has some referenced papers.
 
-To convert from timestamp to datetime, use this line of code
+## Installation
 
-```python
-data['Timestamp'] = pd.to_datetime(data['Timestamp'], unit='ms')
+Required Python libraries can be found [here](notebook/requirements.txt), to install them in your system or virtual env:
 ```
+$ pip install -r notebook/requirements.txt
+```
+To avoid version control errors:
+```
+$ pip install -r notebook/requirements.txt
+```
+
+TA-lib is also needed for calculating technical indicators, if missing, [here](https://github.com/mrjbq7/ta-lib) some references.
