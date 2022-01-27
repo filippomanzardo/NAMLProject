@@ -67,6 +67,7 @@ def preprocess_data(data, k=1, column=None, window=None, split=0.8,
     val_x = data[num_train:num_train + num_validation] if(validation_split) else np.empty(shape=(0,0))
     test_x = data[num_train + num_validation:]
 
+    # Faster if done by columns
     for i in range(train_x.shape[1]-1) :
         X = train_x[:, i].reshape(-1,1)
         scaler = StandardScaler().fit(X)

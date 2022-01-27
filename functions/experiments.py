@@ -1,7 +1,7 @@
 import pandas as pd 
 import numpy as np
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 from preprocess_data import *
 from train_test_models import *
@@ -12,6 +12,7 @@ from sklearn.metrics import confusion_matrix
 
 def experiment(data, num_iteration):
 
+    # Parameters pool
     train_x, train_y, test_x, test_y = data
     learning_rates = [0.01, 0.001] 
     batch_sizes = [64, 128, 256, 512, 1024]
@@ -101,7 +102,7 @@ if __name__ == "__main__":
     
     print("Starting...")
 
-    timeframe = "6h"
+    timeframe = "1h"
     data = pd.read_csv(f"../data/BTC_EUR-{timeframe}.csv")
     data['Timestamp'] = pd.to_datetime(data['Timestamp'], unit='ms')
     data.set_index(keys='Timestamp', inplace=True)
@@ -114,7 +115,7 @@ if __name__ == "__main__":
     train_x, val_x, test_x, train_y, val_y, test_y = preprocess_data(data, k=shift_days, column=value_to_predict, window=window)
 
     
-    num_iterations = 10
+    num_iterations = 30
     data = (train_x, train_y, test_x, test_y)
 
     print("Iteration starting...")

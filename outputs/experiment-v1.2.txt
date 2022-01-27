@@ -1,0 +1,665 @@
+Starting...
+Preprocessing data...
+Iteration starting...
+
+---------------------- ITERATION 1 ----------------------
+
+Learning Rate: 0.01, Batch Size: 1024, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6285
+Accuracy LSTM Network: 0.9120
+Accuracy CNN Network: 0.5617
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5296
+Accuracy LSTM Network: 0.5555
+Accuracy CNN Network: 0.5340
+
+
+----------- SVM -----------
+Accuracy: 0.5212
+
+
+---------------------- ITERATION 2 ----------------------
+
+Learning Rate: 0.0005, Batch Size: 128, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7452
+Accuracy LSTM Network: 0.9987
+Accuracy CNN Network: 0.6473
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5062
+Accuracy LSTM Network: 0.5440
+Accuracy CNN Network: 0.5217
+
+
+----------- SVM -----------
+Accuracy: 0.5539
+
+
+---------------------- ITERATION 3 ----------------------
+
+Learning Rate: 0.005, Batch Size: 1024, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6739
+Accuracy LSTM Network: 0.9715
+Accuracy CNN Network: 0.6184
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5400
+Accuracy LSTM Network: 0.5545
+Accuracy CNN Network: 0.5410
+
+
+----------- SVM -----------
+Accuracy: 0.5030
+
+
+---------------------- ITERATION 4 ----------------------
+
+Learning Rate: 0.1, Batch Size: 128, Epochs: 30
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6465
+Accuracy LSTM Network: 0.9600
+Accuracy CNN Network: 0.6110
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5022
+Accuracy LSTM Network: 0.5704
+Accuracy CNN Network: 0.4975
+
+
+----------- SVM -----------
+Accuracy: 0.4597
+
+
+---------------------- ITERATION 5 ----------------------
+
+Learning Rate: 0.1, Batch Size: 1024, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6449
+Accuracy LSTM Network: 1.0000
+Accuracy CNN Network: 0.6285
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5253
+Accuracy LSTM Network: 0.5034
+Accuracy CNN Network: 0.5263
+
+
+----------- SVM -----------
+Accuracy: 0.4876
+
+
+---------------------- ITERATION 6 ----------------------
+
+Learning Rate: 0.0005, Batch Size: 256, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7009
+Accuracy LSTM Network: 0.9271
+Accuracy CNN Network: 0.6218
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5453
+Accuracy LSTM Network: 0.5757
+Accuracy CNN Network: 0.5686
+
+
+----------- SVM -----------
+Accuracy: 0.5016
+
+
+---------------------- ITERATION 7 ----------------------
+
+Learning Rate: 0.1, Batch Size: 256, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7319
+Accuracy LSTM Network: 0.9891
+Accuracy CNN Network: 0.6637
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5253
+Accuracy LSTM Network: 0.5520
+Accuracy CNN Network: 0.5353
+
+
+----------- SVM -----------
+Accuracy: 0.4860
+
+
+---------------------- ITERATION 8 ----------------------
+
+Learning Rate: 0.0005, Batch Size: 512, Epochs: 50
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7119
+Accuracy LSTM Network: 0.9822
+Accuracy CNN Network: 0.6406
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5178
+Accuracy LSTM Network: 0.5206
+Accuracy CNN Network: 0.4712
+
+
+----------- SVM -----------
+Accuracy: 0.5186
+
+
+---------------------- ITERATION 9 ----------------------
+
+Learning Rate: 0.01, Batch Size: 64, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6882
+Accuracy LSTM Network: 0.9997
+Accuracy CNN Network: 0.6344
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5308
+Accuracy LSTM Network: 0.5312
+Accuracy CNN Network: 0.5179
+
+
+----------- SVM -----------
+Accuracy: 0.4882
+
+
+---------------------- ITERATION 10 ----------------------
+
+Learning Rate: 0.01, Batch Size: 128, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6950
+Accuracy LSTM Network: 1.0000
+Accuracy CNN Network: 0.6258
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5881
+Accuracy LSTM Network: 0.5742
+Accuracy CNN Network: 0.5095
+
+
+----------- SVM -----------
+Accuracy: 0.4759
+
+
+---------------------- ITERATION 11 ----------------------
+
+Learning Rate: 0.0001, Batch Size: 256, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6577
+Accuracy LSTM Network: 0.9806
+Accuracy CNN Network: 0.5924
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5724
+Accuracy LSTM Network: 0.5304
+Accuracy CNN Network: 0.5355
+
+
+----------- SVM -----------
+Accuracy: 0.5223
+
+
+---------------------- ITERATION 12 ----------------------
+
+Learning Rate: 0.05, Batch Size: 256, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6547
+Accuracy LSTM Network: 1.0000
+Accuracy CNN Network: 0.6085
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5523
+Accuracy LSTM Network: 0.5630
+Accuracy CNN Network: 0.5138
+
+
+----------- SVM -----------
+Accuracy: 0.5064
+
+
+---------------------- ITERATION 13 ----------------------
+
+Learning Rate: 0.5, Batch Size: 512, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7446
+Accuracy LSTM Network: 0.9202
+Accuracy CNN Network: 0.5637
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5384
+Accuracy LSTM Network: 0.5363
+Accuracy CNN Network: 0.5383
+
+
+----------- SVM -----------
+Accuracy: 0.4902
+
+
+---------------------- ITERATION 14 ----------------------
+
+Learning Rate: 0.1, Batch Size: 64, Epochs: 30
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6667
+Accuracy LSTM Network: 0.9735
+Accuracy CNN Network: 0.6186
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5022
+Accuracy LSTM Network: 0.5679
+Accuracy CNN Network: 0.5356
+
+
+----------- SVM -----------
+Accuracy: 0.5019
+
+
+---------------------- ITERATION 15 ----------------------
+
+Learning Rate: 0.01, Batch Size: 64, Epochs: 30
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7000
+Accuracy LSTM Network: 0.9915
+Accuracy CNN Network: 0.6644
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5126
+Accuracy LSTM Network: 0.5078
+Accuracy CNN Network: 0.5344
+
+
+----------- SVM -----------
+Accuracy: 0.5352
+
+
+---------------------- ITERATION 16 ----------------------
+
+Learning Rate: 0.05, Batch Size: 256, Epochs: 30
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6654
+Accuracy LSTM Network: 0.9682
+Accuracy CNN Network: 0.5916
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.4855
+Accuracy LSTM Network: 0.5898
+Accuracy CNN Network: 0.5540
+
+
+----------- SVM -----------
+Accuracy: 0.5137
+
+
+---------------------- ITERATION 17 ----------------------
+
+Learning Rate: 0.1, Batch Size: 1024, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6955
+Accuracy LSTM Network: 0.9507
+Accuracy CNN Network: 0.5446
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5284
+Accuracy LSTM Network: 0.5148
+Accuracy CNN Network: 0.5185
+
+
+----------- SVM -----------
+Accuracy: 0.5288
+
+
+---------------------- ITERATION 18 ----------------------
+
+Learning Rate: 0.01, Batch Size: 256, Epochs: 50
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7148
+Accuracy LSTM Network: 0.9861
+Accuracy CNN Network: 0.6114
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5465
+Accuracy LSTM Network: 0.5422
+Accuracy CNN Network: 0.5388
+
+
+----------- SVM -----------
+Accuracy: 0.4952
+
+
+---------------------- ITERATION 19 ----------------------
+
+Learning Rate: 0.05, Batch Size: 1024, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7078
+Accuracy LSTM Network: 0.9782
+Accuracy CNN Network: 0.6606
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5541
+Accuracy LSTM Network: 0.5438
+Accuracy CNN Network: 0.5533
+
+
+----------- SVM -----------
+Accuracy: 0.5224
+
+
+---------------------- ITERATION 20 ----------------------
+
+Learning Rate: 0.01, Batch Size: 256, Epochs: 50
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6451
+Accuracy LSTM Network: 0.9334
+Accuracy CNN Network: 0.6516
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.4987
+Accuracy LSTM Network: 0.5301
+Accuracy CNN Network: 0.4773
+
+
+----------- SVM -----------
+Accuracy: 0.5007
+
+
+---------------------- ITERATION 21 ----------------------
+
+Learning Rate: 0.05, Batch Size: 128, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7479
+Accuracy LSTM Network: 0.9667
+Accuracy CNN Network: 0.6269
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.4606
+Accuracy LSTM Network: 0.5667
+Accuracy CNN Network: 0.5729
+
+
+----------- SVM -----------
+Accuracy: 0.5028
+
+
+---------------------- ITERATION 22 ----------------------
+
+Learning Rate: 0.05, Batch Size: 256, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6827
+Accuracy LSTM Network: 0.9700
+Accuracy CNN Network: 0.6214
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5146
+Accuracy LSTM Network: 0.5597
+Accuracy CNN Network: 0.5056
+
+
+----------- SVM -----------
+Accuracy: 0.5176
+
+
+---------------------- ITERATION 23 ----------------------
+
+Learning Rate: 0.0001, Batch Size: 1024, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7102
+Accuracy LSTM Network: 0.9845
+Accuracy CNN Network: 0.6325
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5328
+Accuracy LSTM Network: 0.5369
+Accuracy CNN Network: 0.5043
+
+
+----------- SVM -----------
+Accuracy: 0.5155
+
+
+---------------------- ITERATION 24 ----------------------
+
+Learning Rate: 0.5, Batch Size: 512, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7152
+Accuracy LSTM Network: 0.9568
+Accuracy CNN Network: 0.6324
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5727
+Accuracy LSTM Network: 0.5432
+Accuracy CNN Network: 0.5416
+
+
+----------- SVM -----------
+Accuracy: 0.5665
+
+
+---------------------- ITERATION 25 ----------------------
+
+Learning Rate: 0.5, Batch Size: 64, Epochs: 40
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7185
+Accuracy LSTM Network: 1.0000
+Accuracy CNN Network: 0.6518
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5125
+Accuracy LSTM Network: 0.5617
+Accuracy CNN Network: 0.5022
+
+
+----------- SVM -----------
+Accuracy: 0.5259
+
+
+---------------------- ITERATION 26 ----------------------
+
+Learning Rate: 0.005, Batch Size: 512, Epochs: 30
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6531
+Accuracy LSTM Network: 0.9851
+Accuracy CNN Network: 0.6139
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5356
+Accuracy LSTM Network: 0.5600
+Accuracy CNN Network: 0.4799
+
+
+----------- SVM -----------
+Accuracy: 0.4544
+
+
+---------------------- ITERATION 27 ----------------------
+
+Learning Rate: 0.0005, Batch Size: 256, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.7131
+Accuracy LSTM Network: 0.9626
+Accuracy CNN Network: 0.6728
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5643
+Accuracy LSTM Network: 0.5698
+Accuracy CNN Network: 0.4921
+
+
+----------- SVM -----------
+Accuracy: 0.5477
+
+
+---------------------- ITERATION 28 ----------------------
+
+Learning Rate: 0.1, Batch Size: 128, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6494
+Accuracy LSTM Network: 0.9842
+Accuracy CNN Network: 0.6199
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5450
+Accuracy LSTM Network: 0.5462
+Accuracy CNN Network: 0.4948
+
+
+----------- SVM -----------
+Accuracy: 0.5093
+
+
+---------------------- ITERATION 29 ----------------------
+
+Learning Rate: 0.1, Batch Size: 512, Epochs: 50
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6739
+Accuracy LSTM Network: 0.9738
+Accuracy CNN Network: 0.6358
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.4990
+Accuracy LSTM Network: 0.5384
+Accuracy CNN Network: 0.5339
+
+
+----------- SVM -----------
+Accuracy: 0.4963
+
+
+---------------------- ITERATION 30 ----------------------
+
+Learning Rate: 0.05, Batch Size: 512, Epochs: 20
+
+
+----------- Train -----------
+Accuracy FullyConnected Network: 0.6836
+Accuracy LSTM Network: 1.0000
+Accuracy CNN Network: 0.6482
+
+
+----------- Test -----------
+Accuracy FullyConnected Network: 0.5091
+Accuracy LSTM Network: 0.5261
+Accuracy CNN Network: 0.4716
+
+
+----------- SVM -----------
+Accuracy: 0.5411
+
+
+--------------------------------------------------
+
+
+---------------------- DONE ----------------------
+
+
+--------------------------------------------------
+
+
+
+---------------------- RECAP ----------------------
+
+
+----------- Train -----------
+FullyConnected Network:
+     Max: 0.7479, Min: 0.6285, Avg: 0.6889, Std: 0.0326 
+LSTM Network:
+     Max: 1.0000, Min: 0.9120, Avg: 0.9735, Std: 0.0243 
+CNN Network:
+     Max: 0.6728, Min: 0.5446, Avg: 0.6239, Std: 0.0300 
+
+----------- Test -----------
+FullyConnected Network:
+     Max: 0.5881, Min: 0.4606, Avg: 0.5283, Std: 0.0273 
+LSTM Network:
+     Max: 0.5898, Min: 0.5034, Avg: 0.5472, Std: 0.0208 
+CNN Network:
+     Max: 0.5729, Min: 0.4712, Avg: 0.5207, Std: 0.0267 
+
+----------- SVM -----------
+     Max: 0.5516, Min: 0.5007, Avg: 0.5219, Std: 0.0118 
