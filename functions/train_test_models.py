@@ -8,6 +8,7 @@ from sklearn.metrics import confusion_matrix
 from tensorflow import keras 
 from keras import layers
 
+# Test helper function
 def test_model(model, test_x, test_y, only_accuracy=False):
     y_hat = model.predict(test_x)
     for i in range(y_hat.shape[0]):
@@ -34,6 +35,7 @@ def test_model(model, test_x, test_y, only_accuracy=False):
 
     return accuracy
 
+# Test model for shift/window accuracies
 def testmodel(input_shape, activation='relu'):
 
     model = keras.Sequential()
@@ -44,6 +46,7 @@ def testmodel(input_shape, activation='relu'):
 
     return model
 
+# FullyConnected Model
 def model0(input_shape, activation='relu', optimizer=None, loss=None):
 
     model = keras.Sequential()
@@ -60,6 +63,7 @@ def model0(input_shape, activation='relu', optimizer=None, loss=None):
 
     return model
 
+# LSTM Model
 def model1(input_shape, activation='relu'):
 
     model = keras.Sequential()
@@ -81,6 +85,7 @@ def model1(input_shape, activation='relu'):
 
     return model
 
+# Convolutional Model
 def model2(input_shape, activation='relu'):
 
     model = keras.Sequential()
@@ -104,6 +109,7 @@ def model2(input_shape, activation='relu'):
     
     return model
 
+# Train model 
 def train_model(net, train_data, val_data=None, batch_size=32, 
                 epochs=100, activation=None, loss=None,
                 verbose=1, learning_rate=0.001, return_history=False):
