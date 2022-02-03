@@ -3,8 +3,8 @@ import numpy as np
 import os
 #os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
-from preprocess_data import *
-from train_test_models import *
+from namlproject.functions.preprocess_data import *
+from namlproject.functions.train_test_models import *
 from tensorflow import keras
 from sklearn.model_selection import GridSearchCV
 from sklearn import svm
@@ -103,7 +103,7 @@ if __name__ == "__main__":
     print("Starting...")
 
     timeframe = "1h"
-    data = pd.read_csv(f"../data/BTC_EUR-{timeframe}.csv")
+    data = pd.read_csv(f"namlproject/data/BTC_EUR-{timeframe}.csv")
     data['Timestamp'] = pd.to_datetime(data['Timestamp'], unit='ms')
     data.set_index(keys='Timestamp', inplace=True)
 
